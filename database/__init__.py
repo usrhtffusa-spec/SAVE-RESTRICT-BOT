@@ -1,14 +1,10 @@
-# Rexbots
-# Don't Remove Credit
-# Telegram Channel @RexBots_Official
+# Developed by: @usrhtff009
+# Telegram Channel: https://t.me/usrht01
 
+# Professional Save Restricted Content Bot
+# Personalized by @usrhtff009
 
-# Rexbots
-# Don't Remove Credit
-# Telegram Channel @RexBots_Official
+# from database.db import db
 
-#from database.DB import db
-
-# Rexbots
-# Don't Remove Credit
-# Telegram Channel @RexBots_Official
+# Developer - @usrhtff009
+# Channel - https://t.me/usrht01
