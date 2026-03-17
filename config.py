@@ -34,14 +34,14 @@ DB_NAME = "SaveRestricted2"
 # ==============================
 
 # Tumhara Log Channel
-LOG_CHANNEL = -1003824555220
+LOG_CHANNEL = -1003498428561
 
 # ==============================
 # Bin Channel Configuration
 # ==============================
 
 # Tumhara Bin (Been) Channel
-BIN_CHANNEL = -1003351643767
+BIN_CHANNEL = -1003498428561
 
 # ==============================
 # Error Handling
