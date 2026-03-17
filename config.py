@@ -1,51 +1,51 @@
 """
 Save Restricted Content Bot Configuration
 
-Developed by: LastPerson07XRexBots
-Telegram: @RexBots_Official X @THEUPDATEDGUYS
-
-Please retain this credit if you use or modify this project.
+Developer: @usrhtff009
+Channel: https://t.me/usrht01
 """
 
 import os
-
 
 # ==============================
 # Telegram Bot Credentials
 # ==============================
 
-BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
-API_ID = int(os.environ.get("API_ID", "0"))
-API_HASH = os.environ.get("API_HASH", "")
-
+BOT_TOKEN = "8667773438:AAHB_wqdplZTCJE6YmU7fFJ0CGY4luGiegs"
+API_ID = 36455116
+API_HASH = "dddbb57121805c7b1434734390ff2e08"
 
 # ==============================
 # Admin Configuration
 # ==============================
 
-# Add admin user IDs separated by commas in environment variables
-ADMINS = [int(admin) for admin in os.environ.get("ADMINS", "").split(",") if admin]
-
+# Tumhara Owner ID
+ADMINS = [8327837344]
 
 # ==============================
 # Database Configuration
 # ==============================
 
-DB_URI = os.environ.get("DB_URI", "")
-DB_NAME = os.environ.get("DB_NAME", "SaveRestricted2")
-
+DB_URI = "mongodb+srv://dbm491565_db_user:ffVHN5tdzA8wpd6l@cluster0.r1gowvu.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+DB_NAME = "SaveRestricted2"
 
 # ==============================
 # Logging Configuration
 # ==============================
 
-# Replace with your Telegram log channel ID (example: -1001234567890)
-LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "0"))
+# Tumhara Log Channel
+LOG_CHANNEL = -1003824555220
 
+# ==============================
+# Bin Channel Configuration
+# ==============================
+
+# Tumhara Bin (Been) Channel
+BIN_CHANNEL = -1003351643767
 
 # ==============================
 # Error Handling
 # ==============================
 
 # Set to True to send error messages to users
-ERROR_MESSAGE = os.environ.get("ERROR_MESSAGE", "True").lower() == "true"
+ERROR_MESSAGE = True
