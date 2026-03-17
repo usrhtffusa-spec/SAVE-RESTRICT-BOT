@@ -1,11 +1,6 @@
 # ========================================================
-# Rexbots
-# Don't Remove Credit 🥺
-# Telegram Channel @RexBots_Official
-#
-# Maintained & Updated by:
-# Dhanpal Sharma
-# GitHub: https://github.com/LastPerson07
+# Developer - @usrhtff009
+# Channel - https://t.me/usrht01
 # ========================================================
 
 FROM python:3.10.13-slim-bullseye
@@ -18,27 +13,25 @@ ENV PYTHONUNBUFFERED=1
 # Set working directory
 WORKDIR /app
 
-# Install minimal system dependencies
+# Install system dependencies for high-performance (TGCrypto Support)
 RUN apt-get update && apt-get install -y --no-install-recommends \
     ca-certificates \
+    gcc \
+    python3-dev \
     && rm -rf /var/lib/apt/lists/*
 
-# Install Python dependencies
+# Install Python dependencies separately to use Docker caching
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy project files
+# Copy all project files to the container
 COPY . .
 
-# Start ONLY the bot
-# Flask keep_alive server handles port binding
+# Launch the application
+# Note: Ensure bot.py contains the entry logic for your bot
 CMD ["python3", "bot.py"]
 
 # ========================================================
-# Rexbots
-# Don't Remove Credit
-# Telegram Channel @RexBots_Official
-#
-# Updated & Managed by:
-# Dhanpal Sharma | https://github.com/LastPerson07
+# Optimized for Cloud Deployment (Render/VPS/Railway)
+# Developer - @usrhtff009 | Channel - https://t.me/usrht01
 # ========================================================
