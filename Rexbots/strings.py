@@ -1,111 +1,95 @@
-# Rexbots
-# Don't Remove Credit
-# Telegram Channel @RexBots_Official
+# Developer - @usrhtff009
+# Channel - https://t.me/usrht01
 
-HELP_TXT = """<b>🚀 Welcome to RexBots Save Restricted Bot - Complete Guide</b>
+HELP_TXT = """🌟 𝐒𝐚𝐯𝐞 𝐑𝐞𝐬𝐭𝐫𝐢𝐜𝐭𝐞𝐝 𝐂𝐨𝐧𝐭𝐞𝐧𝐭 𝐁𝐨𝐭 🌟
+-- 𝐏𝐫𝐨𝐟𝐞𝐬𝐬𝐢𝐨𝐧𝐚𝐥 𝐔𝐬𝐞𝐫 𝐌𝐚𝐧𝐮𝐚𝐥 --
 
-<b>👋 How to Use Me</b>
-<blockquote expandable>
-<b>1. Login (Required for Restricted Content)</b>
-• Use <code>/login</code> to connect your account.
-• This allows saving from private/restricted channels.
+Welcome! 🤖 This bot provides an advanced solution to extract and save restricted media from any Telegram channel or group.
 
-<b>2. Saving Content</b>
-• Simply <b>send any Telegram post link</b> (public or private).
-• For <b>batch saving</b>: Send a link like <code>https://t.me/channel/100-110</code> (from message ID 100 to 110).
-• The bot will save all files/media in the range.
+⚙️ 𝐂𝐎𝐑𝐄 𝐅𝐄𝐀𝐓𝐔𝐑𝐄𝐒 & 𝐔𝐒𝐀𝐆𝐄
 
-<b>3. Features</b>
-• Custom captions with {filename} & {size} placeholders
-• Custom thumbnails
-• Auto-forward to your dump chat
-• Daily token system (10 saves/day for free users)
-• Premium = unlimited everything ♾️
-</blockquote>
+🔐 𝟏. 𝐀𝐜𝐜𝐨𝐮𝐧𝐭 𝐀𝐮𝐭𝐡𝐞𝐧𝐭𝐢𝐜𝐚𝐭𝐢𝐨𝐧 (Private Chats)
+‣ Command: /login
+‣ Action: Connects your session to grant the bot access to private/restricted channels where you are a member.
 
-<b>📱 User Commands</b>
+📥 𝟐. 𝐂𝐨𝐧𝐭𝐞𝐧𝐭 𝐄𝐱𝐭𝐫𝐚𝐜𝐭𝐢𝐨𝐧
+‣ Single Task: Send any valid Telegram message link directly. 🔗
+‣ Batch Processing: Send a link range (e.g., https://t.me/channel/100-110) to download multiple files systematically. 📂
 
-<blockquote><b>/start</b> — Restart the bot & view your quota</blockquote>
-<blockquote><b>/help</b> — Show this detailed guide</blockquote>
-<blockquote><b>/settings</b> — Open settings menu (caption, thumbnail, dump chat, stats)</blockquote>
-<blockquote><b>/commands</b> — Quick command list</blockquote>
+🛠️ 𝟑. 𝐀𝐝𝐯𝐚𝐧𝐜𝐞𝐝 𝐂𝐮𝐬𝐭𝐨𝐦𝐢𝐳𝐚𝐭𝐢𝐨𝐧
+‣ Dynamic Captions: Personalize text using {filename} and {size} variables. 📝
+‣ Metadata Management: Set custom thumbnails for your media. 🖼️
+‣ Auto-Routing: Forward processed files directly to a designated Dump Chat. 🚀
+‣ Quota System: 10 operations/day for standard users. Premium grants infinite access. ♾️
 
-<blockquote><b>/login</b> — Login with session string (for restricted channels)</blockquote>
-<blockquote><b>/logout</b> — Logout current session</blockquote>
-<blockquote><b>/cancel</b> — Cancel ongoing batch save</blockquote>
+──────────────────────
 
-<blockquote><b>/myplan</b> — View your plan status & quota</blockquote>
-<blockquote><b>/premium</b> — Premium plans & benefits</blockquote>
+📱 𝐂𝐎𝐌𝐌𝐀𝐍𝐃 𝐃𝐈𝐑𝐄𝐂𝐓𝐎𝐑𝐘
 
-<blockquote><b>/setchat &lt;chat_id&gt;</b> — Set dump chat (auto-forward saved files)</blockquote>
-<blockquote><b>/setchat clear</b> — Remove dump chat</blockquote>
+🖥️ 𝐒𝐲𝐬𝐭𝐞𝐦 & 𝐀𝐜𝐜𝐨𝐮𝐧𝐭
+• /start — Initialize bot & view system status 🟢
+• /help — Access this comprehensive guide 📖
+• /settings — Open advanced configuration panel ⚙️
+• /commands — View quick command list 📋
+• /login — Authenticate your session string 🔑
+• /logout — Terminate current session 🚪
+• /cancel — Halt an ongoing batch process 🛑
 
-<blockquote><b>/set_caption &lt;text&gt;</b> — Set custom caption (use {filename} & {size})</blockquote>
-<blockquote><b>/see_caption</b> — Preview current caption</blockquote>
-<blockquote><b>/del_caption</b> — Remove custom caption</blockquote>
+💎 𝐒𝐮𝐛𝐬𝐜𝐫𝐢𝐩𝐭𝐢𝐨𝐧 & 𝐐𝐮𝐨𝐭𝐚
+• /myplan — Monitor your API quota and plan 📊
+• /premium — Explore premium benefits 🌟
 
-<blockquote><b>/set_thumb</b> — Reply to photo to set custom thumbnail</blockquote>
-<blockquote><b>/view_thumb</b> — Preview current thumbnail</blockquote>
-<blockquote><b>/del_thumb</b> — Remove custom thumbnail</blockquote>
-<blockquote><b>/thumb_mode</b> — Check thumbnail status</blockquote>
+📤 𝐑𝐨𝐮𝐭𝐢𝐧𝐠 & 𝐃𝐮𝐦𝐩 𝐂𝐡𝐚𝐭
+• /setchat <chat_id> — Assign a destination for auto-forwarding 🎯
+• /setchat clear — Unlink current dump chat 🗑️
 
-<b>💡 Tips</b>
-• Free users: 10 saves/day + 5 files per batch
-• Premium users: Unlimited saves & batch size
-• Contact @RexBots_Official for support or premium purchase
+🎨 𝐌𝐞𝐝𝐢𝐚 𝐂𝐮𝐬𝐭𝐨𝐦𝐢𝐳𝐚𝐭𝐢𝐨𝐧
+• /set_caption <text> — Configure default caption layout ✍️
+• /see_caption — Preview your current caption 👀
+• /del_caption — Reset to default caption ❌
+• /set_thumb — Reply to an image to set as thumbnail 🖼️
+• /view_thumb — Display active custom thumbnail 👁️
+• /del_thumb — Remove active thumbnail 🗑️
+• /thumb_mode — Diagnostics for thumbnail status 🩺
 
-<b>Thank you for using RexBots! ❤️</b>
+💡 𝐏𝐫𝐨 𝐓𝐢𝐩: Upgrade to Premium for unrestricted batch processing and zero daily limits. ✨
+Contact @usrhtff009 for support and upgrades. 📞
 """
 
-COMMANDS_TXT = """<b>📜 All Available Commands</b>
+COMMANDS_TXT = """🌟 𝐒𝐲𝐬𝐭𝐞𝐦 𝐂𝐨𝐦𝐦𝐚𝐧𝐝𝐬 🌟
 
-<b>👤 Main Commands</b>
-<blockquote>
-/start  — Home & quota
-/help  — Detailed guide
-/settings — Customize bot
-/commands — This list
+► 🖥️ 𝐆𝐞𝐧𝐞𝐫𝐚𝐥
+/start — System status 🟢
+/help — User manual 📖
+/settings — Configuration ⚙️
+/commands — Command index 📋
 
-/login  — Connect account
-/logout — Disconnect account
-/cancel — Stop current task
-</blockquote>
+► 🔐 𝐀𝐮𝐭𝐡𝐞𝐧𝐭𝐢𝐜𝐚𝐭𝐢𝐨𝐧
+/login — Connect session 🔑
+/logout — Disconnect 🚪
+/cancel — Abort process 🛑
 
-<b>💎 Plan & Quota</b>
-<blockquote>
-/myplan — Your plan status
-/premium — Upgrade options
-</blockquote>
+► 💎 𝐒𝐮𝐛𝐬𝐜𝐫𝐢𝐩𝐭𝐢𝐨𝐧
+/myplan — View quota 📊
+/premium — Upgrade tier 🌟
 
-<b>📤 Dump Chat</b>
-<blockquote>
-/setchat &lt;chat_id&gt; — Set forward destination
-/setchat clear — Remove dump chat
-</blockquote>
+► 📤 𝐑𝐨𝐮𝐭𝐢𝐧𝐠
+/setchat <chat_id> — Set dump chat 🎯
+/setchat clear — Remove dump chat 🗑️
 
-<b>✍️ Caption</b>
-<blockquote>
-/set_caption &lt;text&gt; — Custom caption
-/see_caption — Preview caption
-/del_caption — Remove caption
-</blockquote>
+► 📝 𝐂𝐚𝐩𝐭𝐢𝐨𝐧 𝐌𝐚𝐧𝐚𝐠𝐞𝐦𝐞𝐧𝐭
+/set_caption <text> — Set format ✍️
+/see_caption — Preview format 👀
+/del_caption — Reset format ❌
 
-<b>🖼 Thumbnail</b>
-<blockquote>
-/set_thumb — Reply to photo
-/view_thumb — Preview thumbnail
-/del_thumb — Remove thumbnail
-/thumb_mode — Status
-</blockquote>
+► 🖼️ 𝐓𝐡𝐮𝐦𝐛𝐧𝐚𝐢𝐥 𝐌𝐚𝐧𝐚𝐠𝐞𝐦𝐞𝐧𝐭
+/set_thumb — Set (reply to image) 🖼️
+/view_thumb — Preview active 👁️
+/del_thumb — Remove active 🗑️
+/thumb_mode — Check status 🩺
 
-<b>🔥 Premium = Unlimited Everything</b>
-<i>Contact @RexBots_Official to upgrade!</i>
+👑 Premium Access: @usrhtff009
 """
 
-# Dont remove Credits
-# Developer Telegram @about_zani/143
-# Update channel - @RexBots_Official
-
-# Rexbots
-# Don't Remove Credit
-# Telegram Channel @RexBots_Official
+# Developer - @usrhtff009
+# Channel - https://t.me/usrht01
