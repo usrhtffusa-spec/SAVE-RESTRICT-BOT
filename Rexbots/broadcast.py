@@ -1,12 +1,9 @@
-# Rexbots
-# Don't Remove Credit
-# Telegram Channel @RexBots_Official
-
-
+# Developer - @usrhtff009
+# Channel - https://t.me/usrht01
 
 from pyrogram.errors import InputUserDeactivated, UserNotParticipant, FloodWait, UserIsBlocked, PeerIdInvalid
 from database.db import db
-from pyrogram import Client, filters
+from pyrogram import Client, filters, enums
 from config import ADMINS
 import asyncio
 import datetime
@@ -19,7 +16,7 @@ from logger import LOGGER
 logger = LOGGER(__name__)
 
 # ---------------------------------------------------
-# Broadcast helper function
+# Professional Broadcast Helper
 # ---------------------------------------------------
 async def broadcast_messages(user_id, message):
     try:
@@ -42,20 +39,20 @@ async def broadcast_messages(user_id, message):
         return False, "Error"
 
 # ---------------------------------------------------
-# /broadcast command
+# /broadcast - Admin Mass Messaging
 # ---------------------------------------------------
 @Client.on_message(filters.command("broadcast") & filters.user(ADMINS))
 async def broadcast_command(bot: Client, message: Message):
     b_msg = message.reply_to_message
     if not b_msg:
         return await message.reply_text(
-            "**__Reply to this command with the message you want to broadcast.__**",
+            "📝 Reply to this command with the message you want to broadcast.",
             quote=True
         )
 
     users = await db.get_all_users()
     sts = await message.reply_text(
-        text='**__Broadcasting your message...__**',
+        text='📡 Initializing global broadcast...',
         quote=True
     )
 
@@ -81,59 +78,46 @@ async def broadcast_command(bot: Client, message: Message):
                 elif sh == "Error":
                     failed += 1
             done += 1
-# Rexbots
-# Don't Remove Credit
-# Telegram Channel @RexBots_Official
 
             if done % 20 == 0:
                 await sts.edit(
-                    f"**__Broadcast In Progress:__**\n\n"
-                    f"**👥 Total Users:** {total_users}\n"
-                    f"**💫 Completed:** {done} / {total_users}\n"
-                    f"**✅ Success:** {success}\n"
-                    f"**🚫 Blocked:** {blocked}\n"
-                    f"**🚮 Deleted:** {deleted}"
+                    f"🛰 𝐁𝐫𝐨𝐚𝐝𝐜𝐚𝐬𝐭 𝐈𝐧 𝐏𝐫𝐨𝐠𝐫𝐞𝐬𝐬\n\n"
+                    f"👥 𝐓𝐨𝐭𝐚𝐥 𝐔𝐬𝐞𝐫𝐬: {total_users}\n"
+                    f"🌀 𝐂𝐨𝐦𝐩𝐥𝐞𝐭𝐞𝐝: {done} / {total_users}\n"
+                    f"✅ 𝐒𝐮𝐜𝐜𝐞𝐬𝐬: {success}\n"
+                    f"🚫 𝐁𝐥𝐨𝐜𝐤𝐞𝐝: {blocked}\n"
+                    f"🚮 𝐃𝐞𝐥𝐞𝐭𝐞𝐝: {deleted}"
                 )
         else:
             done += 1
             failed += 1
-            if done % 20 == 0:
-                await sts.edit(
-                    f"**__Broadcast In Progress:__**\n\n"
-                    f"**👥 Total Users:** {total_users}\n"
-                    f"**💫 Completed:** {done} / {total_users}\n"
-                    f"**✅ Success:** {success}\n"
-                    f"**🚫 Blocked:** {blocked}\n"
-                    f"**🚮 Deleted:** {deleted}"
-                )
 
     time_taken = datetime.timedelta(seconds=int(time.time() - start_time))
     await sts.edit(
-        f"**__Broadcast Completed:__**\n"
-        f"**⏰ Completed in:** {time_taken}\n\n"
-        f"**👥 Total Users:** {total_users}\n"
-        f"**💫 Completed:** {done} / {total_users}\n"
-        f"**✅ Success:** {success}\n"
-        f"**🚫 Blocked:** {blocked}\n"
-        f"**🚮 Deleted:** {deleted}"
+        f"🎊 𝐁𝐫𝐨𝐚𝐝𝐜𝐚𝐬𝐭 𝐂𝐨𝐦𝐩𝐥𝐞𝐭𝐞𝐝\n"
+        f"⏱️ 𝐓𝐢𝐦𝐞 𝐓𝐚𝐤𝐞𝐧: {time_taken}\n\n"
+        f"📊 𝐒𝐮𝐦𝐦𝐚𝐫𝐲:\n"
+        f"‣ Total Users: {total_users}\n"
+        f"‣ Success: {success}\n"
+        f"‣ Blocked: {blocked}\n"
+        f"‣ Deleted: {deleted}"
     )
 
 # ---------------------------------------------------
-# /users Command (Standalone + JSON export)
+# /users - Advanced Analytics & JSON Export
 # ---------------------------------------------------
 @Client.on_message(filters.command("users") & filters.user(ADMINS))
 async def users_count(bot: Client, message: Message):
-    msg = await message.reply_text("⏳ <b>__Gathering User Data...__</b>", quote=True)
+    msg = await message.reply_text("⏳ Processing user analytics...", quote=True)
     try:
         total = await db.total_users_count()
         await msg.edit_text(
-            f"""
-🌀 <b><i>User Analytics Update</i></b> 🌀
-
-👥 <b>Total Registered Users:</b> {total}
-🛰 <b>System Status:</b> Active ✅
-🧠 <b>Data Source:</b> MongoDB (async)
-"""
+            f"📊 𝐒𝐲𝐬𝐭𝐞𝐦 𝐔𝐬𝐞𝐫 𝐀𝐧𝐚𝐥𝐲𝐭𝐢𝐜𝐬\n\n"
+            f"👥 Total Registered: {total}\n"
+            f"📡 Server Status: Active ✅\n"
+            f"🧠 Database: MongoDB (Async Mode)\n\n"
+            f"<i>Generating full user list for export...</i>",
+            parse_mode=enums.ParseMode.HTML
         )
 
         users_cursor = await db.get_all_users()
@@ -145,14 +129,13 @@ async def users_count(bot: Client, message: Message):
                 "id": user.get("id")
             })
 
-        tmp_path = "SaveRestricted.json"
+        tmp_path = "User_Database.json"
         with open(tmp_path, "w", encoding="utf-8") as f:
             json.dump(users_list, f, indent=2, ensure_ascii=False)
 
-        caption = f"📄 **Recorded {len(users_list)} Users**"
         await message.reply_document(
             document=tmp_path,
-            caption=caption
+            caption=f"📄 User database backup recorded.\n👥 Total: {len(users_list)} Users"
         )
 
         try:
@@ -161,14 +144,8 @@ async def users_count(bot: Client, message: Message):
             logger.error(f"[!] Failed to Delete File {tmp_path}: {e}")
 
     except Exception as e:
-        await msg.edit_text(f"**__⚠️ Error Fetching User Data:__**\n<code>{e}</code>")
+        await msg.edit_text(f"❌ Error fetching user data: {e}")
         logger.error(f"[!] /users error: {e}")
 
-
-# Credits
-# Developer Telegram: @RexBots_Official
-# Update channel: @RexBots_Official
-
-# Rexbots
-# Don't Remove Credit
-# Telegram Channel @RexBots_Official
+# Developer - @usrhtff009
+# Channel - https://t.me/usrht01
